@@ -57,15 +57,3 @@ def abstract(fpath, ask_lexpath):
         #df_snomed = df_snomed.append({'user' : row[0] , 'tweet' : tweet, 'suicide risk':row[2] , 'tweet_hits' : tweet_hits}, ignore_index=True)
         df_snomed = df_snomed.append({'tweet' : tweet, 'label':row[1] , 'tweet_hits' : tweet_hits}, ignore_index=True)
     return df_snomed
-
-  #example call to abstraction method
-#df_abstract = abstract('Consolidated.csv','cannabis_lexicon.tsv')
-df_abstract = abstract('Consolidated.csv','depression_lexicon.tsv')
-print(df_abstract)
-#df_abstract.to_csv('abstracted_cannabis_consolidated.csv', index=False)
-df_abstract.to_csv('abstracted_depression_consolidated.csv', index=False)
-
-'''
-df_abstract = abstract('drive/My Drive/off_shoot_WWW19/abstraction/Dr_welton_full_annotations.tsv', 
-                       'drive/My Drive/off_shoot_WWW19/abstraction/SNOMED_AskAPatient_Dict.tsv', 'drive/My Drive/off_shoot_WWW19/abstraction/SNOMED_TwADR-L_Dict.tsv')
-'''
